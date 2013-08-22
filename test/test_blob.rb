@@ -210,6 +210,9 @@ class TestBlob < Test::Unit::TestCase
     assert blob("C/example.tab.c").generated?
     #assert blob("C++/example.tab.cc").generated?
     #assert blob("Java/example.tab.java").generated?
+
+    # eC generated code
+    assert blob("C/hello-ec.c").generated?
   end
 
   def test_vendored

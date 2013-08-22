@@ -201,6 +201,15 @@ class TestBlob < Test::Unit::TestCase
     # Minified CSS
     assert !blob("CSS/bootstrap.css").generated?
     assert blob("CSS/bootstrap.min.css").generated?
+
+    # Flex lexical scanner
+    assert blob("C/lex.yy.c").generated?
+    #assert blob("C++/lec.yy.cc").generated?
+
+    # Bison parser
+    assert blob("C/example.tab.c").generated?
+    #assert blob("C++/example.tab.cc").generated?
+    #assert blob("Java/example.tab.java").generated?
   end
 
   def test_vendored
